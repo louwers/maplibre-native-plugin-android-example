@@ -58,10 +58,10 @@ The public C ABI is experimental. Keep the plugin implementation and SDK version
 
 The [MapLibre Native repository](https://github.com/maplibre/maplibre-native) contains [example plugins in `plugins/`](https://github.com/maplibre/maplibre-native/tree/main/plugins), including [the n-gon layer](https://github.com/maplibre/maplibre-native/tree/main/plugins/ngon-layer). The public plugin API header is [`include/mln/plugin/plugin_api.h`](https://github.com/maplibre/maplibre-native/blob/main/include/mln/plugin/plugin_api.h). Use the sources from the SDK's matching release commit when implementing against a specific pre-release.
 
-Use this prompt as a template, replacing `[describe your plugin]` with your idea:
+Use this prompt as a template and add your plugin idea at the end:
 
 ```text
-Create a MapLibre Native Android plugin that [describe your plugin].
+Create a MapLibre Native Android plugin.
 Use https://github.com/maplibre/maplibre-native as a reference:
 example plugins are in plugins/, including plugins/ngon-layer/, and the public
 plugin API header is at include/mln/plugin/plugin_api.h.
@@ -75,4 +75,6 @@ API header from that version's matching release commit. Compile against the
 header packaged in the published AAR at
 prefab/modules/maplibre/include/mln/plugin/plugin_api.h.
 Include a small offline Android demo of the plugin.
+
+My plugin idea: [describe your plugin]
 ```
