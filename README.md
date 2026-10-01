@@ -58,11 +58,11 @@ The public C ABI is experimental. Keep the plugin implementation and SDK version
 
 The [MapLibre Native repository](https://github.com/maplibre/maplibre-native) contains [example plugins in `plugins/`](https://github.com/maplibre/maplibre-native/tree/main/plugins), including [the n-gon layer](https://github.com/maplibre/maplibre-native/tree/main/plugins/ngon-layer). The public plugin API header is [`include/mln/plugin/plugin_api.h`](https://github.com/maplibre/maplibre-native/blob/main/include/mln/plugin/plugin_api.h). Use the sources from the SDK's matching release commit when implementing against a specific pre-release.
 
-Try giving your coding assistant a prompt like this:
+Use this prompt as a template, replacing `[describe your plugin]` with your idea:
 
 ```text
-Create a MapLibre Native Android layer plugin that draws striped polygon
-markers. Use https://github.com/maplibre/maplibre-native as a reference:
+Create a MapLibre Native Android plugin that [describe your plugin].
+Use https://github.com/maplibre/maplibre-native as a reference:
 example plugins are in plugins/, including plugins/ngon-layer/, and the public
 plugin API header is at include/mln/plugin/plugin_api.h.
 
