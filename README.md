@@ -1,5 +1,5 @@
 > [!WARNING]
-> This repository was scaffolded by AI and contains AI-generated source code.
+> This repository is an LLM generated demo. Not reviewed.
 
 # MapLibre Native Android plugin example
 
