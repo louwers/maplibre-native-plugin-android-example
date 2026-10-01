@@ -59,31 +59,7 @@ The public C ABI is experimental. Keep the plugin implementation and SDK version
 Try giving your coding assistant a prompt like this:
 
 ```text
-Could you scaffold an Android app that imports
-org.maplibre.gl:android-sdk:13.6.1-pre935d410353da9d701ad42c97f2e0c300c8d408b8
-from Maven Central? Please check that it exists first. I want to create a
-MapLibre Native plugin that draws striped polygon markers. You can use the
-plugin API and n-gon example in
-https://github.com/louwers/maplibre-native-plugin-android-example as a reference.
-Compile against the public plugin header included in the SDK's Prefab package.
-Add a simple offline style showing the plugin, build it, and run it on an
-Android emulator. Include a screenshot and build instructions in the README.
-```
-
-## Verification
-
-Verified on October 1, 2026:
-
-- Maven Central metadata, POM, AAR, and Gradle module metadata exist for the exact version.
-- Gradle resolves that Maven version for both modules; CMake uses its published Prefab header.
-- Debug APK and release plugin AAR build for all four ABIs.
-- Android lint completes with zero errors (seven advisory warnings).
-- The app launches on the `Pixel_10_Pro` arm64 emulator, Android API 37, loads the plugin style, and visibly renders all three polygons. The screenshot above comes from that run. Other ABIs were build-checked only.
-
-To inspect the resolved SDK:
-
-```sh
-./gradlew :app:dependencyInsight \
-  --dependency org.maplibre.gl:android-sdk \
-  --configuration debugRuntimeClasspath
+Create a MapLibre Native Android layer plugin that draws striped polygon
+markers, using this repository's n-gon plugin as a reference. Use the public
+C ABI from the published SDK's Prefab package and include a small offline demo.
 ```
