@@ -1,5 +1,5 @@
 > [!WARNING]
-> This repository was scaffolded by AI and contains AI-generated source code. Review it before using it in production.
+> This repository was scaffolded by AI and contains AI-generated source code.
 
 # MapLibre Native Android plugin example
 
@@ -53,6 +53,22 @@ The plugin AAR contains `libngon-plugin.so` for `arm64-v8a`, `armeabi-v7a`, `x86
 5. [ngon.json](app/src/main/assets/ngon.json) selects `"type": "ngon"` and uses feature expressions for polygon corners and colors. Plugin layers currently load through style JSON rather than Java `Layer` peers.
 
 The public C ABI is experimental. Keep the plugin implementation and SDK version compatible when upgrading. This example targets the single-renderer `android-sdk` artifact; a multi-backend integration must register with the selected renderer's library.
+
+## Create your own plugin
+
+Try giving your coding assistant a prompt like this:
+
+```text
+Could you scaffold an Android app that imports
+org.maplibre.gl:android-sdk:13.6.1-pre935d410353da9d701ad42c97f2e0c300c8d408b8
+from Maven Central? Please check that it exists first. I want to create a
+MapLibre Native plugin that draws striped polygon markers. You can use the
+plugin API and n-gon example in
+https://github.com/louwers/maplibre-native-plugin-android-example as a reference.
+Compile against the public plugin header included in the SDK's Prefab package.
+Add a simple offline style showing the plugin, build it, and run it on an
+Android emulator. Include a screenshot and build instructions in the README.
+```
 
 ## Verification
 
