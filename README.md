@@ -56,10 +56,23 @@ The public C ABI is experimental. Keep the plugin implementation and SDK version
 
 ## Create your own plugin
 
+The [MapLibre Native repository](https://github.com/maplibre/maplibre-native) contains [example plugins in `plugins/`](https://github.com/maplibre/maplibre-native/tree/main/plugins), including [the n-gon layer](https://github.com/maplibre/maplibre-native/tree/main/plugins/ngon-layer). The public plugin API header is [`include/mln/plugin/plugin_api.h`](https://github.com/maplibre/maplibre-native/blob/main/include/mln/plugin/plugin_api.h). Use the sources from the SDK's matching release commit when implementing against a specific pre-release.
+
 Try giving your coding assistant a prompt like this:
 
 ```text
 Create a MapLibre Native Android layer plugin that draws striped polygon
-markers, using this repository's n-gon plugin as a reference. Use the public
-C ABI from the published SDK's Prefab package and include a small offline demo.
+markers. Use https://github.com/maplibre/maplibre-native as a reference:
+example plugins are in plugins/, including plugins/ngon-layer/, and the public
+plugin API header is at include/mln/plugin/plugin_api.h.
+
+Use the MapLibre Android pre-release from Maven Central:
+org.maplibre.gl:android-sdk:13.6.1-pre935d410353da9d701ad42c97f2e0c300c8d408b8
+Check for a newer pre-release at
+https://github.com/maplibre/maplibre-native/releases and confirm it is available
+on Maven Central before choosing the SDK version. Use the example plugin and
+API header from that version's matching release commit. Compile against the
+header packaged in the published AAR at
+prefab/modules/maplibre/include/mln/plugin/plugin_api.h.
+Include a small offline Android demo of the plugin.
 ```
