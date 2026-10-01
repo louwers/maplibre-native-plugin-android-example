@@ -1,0 +1,36 @@
+{
+  "version": 8,
+  "name": "Published SDK plugin smoke test",
+  "center": [0, 0],
+  "zoom": 10,
+  "sources": {
+    "shapes": {
+      "type": "geojson",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          {"type": "Feature", "properties": {"sides": 3, "color": "#E76F51"}, "geometry": {"type": "Point", "coordinates": [-0.07, 0]}},
+          {"type": "Feature", "properties": {"sides": 5, "color": "#2A9D8F"}, "geometry": {"type": "Point", "coordinates": [0, 0]}},
+          {"type": "Feature", "properties": {"sides": 8, "color": "#457B9D"}, "geometry": {"type": "Point", "coordinates": [0.07, 0]}}
+        ]
+      }
+    }
+  },
+  "layers": [
+    {"id": "background", "type": "background", "paint": {"background-color": "#F3F2ED"}},
+    {
+      "id": "ngons",
+      "type": "ngon",
+      "source": "shapes",
+      "paint": {
+        "ngon-radius": 30,
+        "ngon-corners": ["get", "sides"],
+        "ngon-color": ["get", "color"],
+        "ngon-stroke-width": 2,
+        "ngon-stroke-color": "#FFFFFF",
+        "ngon-pitch-alignment": "viewport",
+        "ngon-pitch-scale": "viewport"
+      }
+    }
+  ]
+}
