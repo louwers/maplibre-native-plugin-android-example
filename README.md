@@ -3,9 +3,11 @@
 
 # MapLibre Native Android plugin example
 
-A small Android app that builds the n-gon layer plugin against the **published SDK from Maven Central** and renders a triangle, pentagon, and octagon. The style and GeoJSON are bundled with the app, so the demo works offline.
+A small Android app that builds the n-gon layer plugin against the **published SDK from Maven Central** and renders the same grid of 24 polygons as the MapLibre Native plugin demo and the [iOS example](https://github.com/louwers/maplibre-native-plugin-ios-example). The style and GeoJSON are bundled with the app, so the demo works offline.
 
-<img src="verification/emulator.png" alt="Android emulator rendering an orange triangle, green pentagon, and blue octagon using the n-gon layer plugin" width="320" />
+<img src="verification/emulator.png" alt="Android emulator rendering the native example polygon grid using the n-gon layer plugin" width="320" />
+
+The bundled [style](app/src/main/assets/ngon.json) is copied from `plugins/android/app/src/main/assets/ngon.json` in MapLibre Native (commit `043df51b2dfebfd8a1f0b20d355ab23238ae31bb`). It demonstrates polygon corners, strokes, opacity, blur, size, and rotation.
 
 ## Published SDK
 

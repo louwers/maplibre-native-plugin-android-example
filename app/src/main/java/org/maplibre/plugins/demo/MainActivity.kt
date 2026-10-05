@@ -23,7 +23,7 @@ class MainActivity : Activity() {
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync { map ->
             if (savedInstanceState == null) {
-                map.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(0.0, 0.0), 10.0))
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(0.0, 0.0), 11.3))
             }
             // Plugin layers currently use style JSON rather than a Java Layer peer.
             map.setStyle(Style.Builder().fromUri("asset://ngon.json")) {
